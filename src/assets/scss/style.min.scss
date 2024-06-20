@@ -1,0 +1,84 @@
+@import "rootColors.scss";
+@import "cardBaseColors.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {
+    font-size: 0.9375em;
+    background: #f2f2f2;
+
+    button {
+        border: none;
+    }
+
+
+    main {
+        .container {
+            display: flex;
+            flex-flow: column wrap;
+            width: 300px;
+            align-items: center;
+            margin: 1.2em auto;
+            border-radius: 15px;
+        }
+
+        .container:hover {
+            transform: scale(0.9);
+            cursor: pointer;
+            box-shadow: 8px 8px 30px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 8px 8px 30px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 8px 8px 30px 2px rgba(0,0,0,0.75);
+        }
+    }
+
+    h2 {
+        color: $Very-light-gray-background-headings-buttons;
+        text-transform: uppercase;
+        font-family: "Big Shoulders Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    p {
+        color: $Transparent-white-paragraphs;
+    }
+
+    p,
+    button {
+        font-family: "Lexend Deca", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+    }
+}
+
+
+@media (min-width:700px) {
+    body {
+        main {
+            .container {
+                flex-flow: row wrap;
+                justify-content: center;
+                margin: 7.5% auto;
+                width: 990px;
+
+
+
+                #orange {
+                    @include CardBorder(15px, 15px, 0, 0)
+                }
+
+
+                #Very-dark-cyan {
+                    @include CardBorder(0, 0, 15px, 15px)
+                }
+            }
+
+        }
+    }
+}

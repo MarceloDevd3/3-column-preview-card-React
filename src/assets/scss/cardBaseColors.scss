@@ -1,0 +1,81 @@
+@import "rootColors.scss";
+
+
+
+@mixin CardBorder($left-top, $left-bottom, $right-top, $right-bottom) {
+    border-radius: $left-top $right-top $right-bottom $left-bottom;
+}
+
+
+
+.container {
+          .Card-item {
+            width: 330px;
+            height: 445px;
+            padding: 2.5em 2em;
+            .card-top {
+                img {
+                    margin-bottom: 1.5em;
+                }
+
+                .card-top-title {
+                    font-size: 2em;
+                    margin: 0.3em 0 1em 0;
+                }
+
+            }
+
+            .main-card-content {
+             width: 250px;
+             .card-main-text {
+                font-size: 1.1em;
+                line-height: 25px;
+                margin-bottom: 2.5em;
+             }
+
+             .card-btn {
+                width: 200px;
+                height: 55px;
+                border-radius: 25px;
+                cursor: pointer;
+             }
+
+
+             #OrangeH {
+                color: $Bright-orange;
+             }
+
+             #DarkH {
+                color: $Dark-cyan;
+             }
+
+             #VeryDarkH {
+                color: $Very-dark-cyan;
+             }
+
+             .card-btn:hover {
+                background: transparent;
+                outline: 2px solid $Very-light-gray-background-headings-buttons;
+                color: #fff !important;
+                transition: ease-in-out 1s ;
+             }
+            }
+        }
+
+
+
+        #orange {
+            background: $Bright-orange ;
+            @include CardBorder(15px,0,15px,0) 
+        }
+
+        #Dark-cyan {
+            background: $Dark-cyan;
+        }
+
+        #Very-dark-cyan {
+            background: $Very-dark-cyan;
+            @include CardBorder(0,15px,0,15px)
+        }
+}
+
